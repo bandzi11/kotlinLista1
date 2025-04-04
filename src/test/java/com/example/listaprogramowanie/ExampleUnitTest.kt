@@ -34,6 +34,7 @@ class HeronTest {
 }
 
 class OtherTests {
+    @Test
     fun testWspolne() {
         val wynik = wspolne(listOf(1, 2, 3, 4), listOf(3, 4, 5, 6))
         assertEquals(listOf(3, 4), wynik)
