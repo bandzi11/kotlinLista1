@@ -15,7 +15,11 @@ class ExampleUnitTest {
         assertEquals(4, 2 + 2)
     }
 }
-
+/**
+ * testy jednostkowe wykonano na podstawie https://junit.org/junit5/docs/current/user-guide/
+ * głównie wykorzystano rozdział 2 (2.2, 2.3, 2.5) oraz 5.15
+ * dodatkowo korzystano także z https://www.jetbrains.com/help/kotlin-multiplatform-dev/multiplatform-run-tests.html#work-with-more-complex-projects
+ */
 class HeronTest {
 
     @Test
