@@ -15,21 +15,23 @@ class ExampleUnitTest {
         assertEquals(4, 2 + 2)
     }
 }
+
 /**
  * testy jednostkowe wykonano na podstawie https://junit.org/junit5/docs/current/user-guide/
  * głównie wykorzystano rozdział 2 (2.2, 2.3, 2.5) oraz 5.15
  * dodatkowo korzystano także z https://www.jetbrains.com/help/kotlin-multiplatform-dev/multiplatform-run-tests.html#work-with-more-complex-projects
+ * Skorzystano także z pomocy AI ChatGPT z promptem 
+ * "jak w teście jednostkowym znaleźć wyjątki za pomocą funkcji try catch"
  */
 class HeronTest {
 
     @Test
     fun testHeron() {
-        // Test dla trojkata o bokach 5.0, 4.0 i 5.0
         val wynik = heron(3.0, 4.0, 5.0)
         assertEquals(6.0, wynik, 0.001)
         try {
             heron(1.0, 1.0, 3.0)
-            fail("Oczekiwano wyjątku IllegalArgumentException")
+            fail("Oczekiwano wyjatku IllegalArgumentException")
         } catch (e: IllegalArgumentException) {
             assertEquals("Z podanych bokow nie da sie stworzyc trojkata", e.message)
         }
@@ -45,7 +47,7 @@ class OtherTests {
 
         try {
             wspolne(emptyList(), listOf(1, 2))
-            fail("Oczekiwano wyjątku IllegalArgumentException")
+            fail("Oczekiwano wyjatku IllegalArgumentException")
         } catch (e: IllegalArgumentException) {
             assertEquals("Zbiory z ktorych ma byc wyciagnieta czesc wspolna nie moga byc puste", e.message)
         }
@@ -57,7 +59,7 @@ class OtherTests {
 
         try {
             podzbiory(emptySet())
-            fail("Oczekiwano wyjątku IllegalArgumentException")
+            fail("Oczekiwano wyjatku IllegalArgumentException")
         } catch (e: IllegalArgumentException) {
             assertEquals("Zbior nie może byc pusty", e.message)
         }
@@ -106,7 +108,7 @@ class OtherTests {
 
         try {
             transkrybuj("ATHZ")
-            fail("Oczekiwano wyjątku IllegalArgumentException")
+            fail("Oczekiwano wyjatku IllegalArgumentException")
         } catch (e: IllegalArgumentException) {
             assertEquals("Sekwencja DNA musi skladac sie z dozwolonych znakow -> ATCG", e.message)
         }
